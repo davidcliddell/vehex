@@ -17,8 +17,9 @@
       "maintainer": true
     }
   ],
-  "homepage": "https://github.com/davidcliddell/vehex.git",
-  "dependencies": {},
+  "dependencies": {
+    "https://github.com/davidcliddell/libDCL": "^1.0.0"
+  },
   "frameworks": "arduino",
   "platforms": "*"
 }

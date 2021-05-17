@@ -3,11 +3,11 @@ VEHEX
 Overview
 Library to control Victron ve.direct charging devices using the HEX serial protocol.
 
-The normal ve.direct protocol only sends messages and therefore can't be used to contol the device.
+The normal ve.direct protocol only sends messages and therefore can't be used to control the device.
 
-The HEX protocol (there is a copy under docs) is a bit weird. It is command response protocol
+The HEX protocol (there is a copy under docs) is a bit weird. It is command/response protocol
 but if you don't send it a command every second or so it reverts to the normal ve.direct protocol which
-sends all the data the device has every second. So you need to send it a command continuously to keep
+sends all the data from the device has every second. So you need to send it a commandscontinuously to keep
 it in HEX mode (this ability is provided by the class function 'get'). Just to make it more difficult
 it also sends asyncronous messages which you can ignore.
 
@@ -25,9 +25,12 @@ VE.Direct   Name    GPIO pin
 3           +5V     NC
 
 Software
-Other than the normal Arduino library there no other dependencies for vehex_example.cpp.
+Other than the normal Arduino library the only dependency is https://github.com/davidcliddell/libDCL.git
+which has some simple functions in it. The library is in the platformio.ini, library.json.
 This was developed as part of a much larger Lithium Battery monitoring project sending to data a signal K
 server. I intend to provide an example which will interface to Signal K via sensESP.
 
 Setup
-Clone or fork the code onto youe local machine
+Get the code from github onto youe local machine, copy examples/vehex_example.cpp to src and compile.
+
+Good luck
