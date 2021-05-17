@@ -11,6 +11,9 @@ sends all the data from the device has every second. So you need to send it a co
 it in HEX mode (this ability is provided by the class function 'get'). Just to make it more difficult
 it also sends asyncronous messages which you can ignore.
 
+I have only implemented a small number of the hundreds of possibled command IDs but it is very easy to add new commands
+using add_paser or add_parser_raw.
+
 Hardware
 I have only tested this on Hat Labs SH-ESP32 under platformio but it should work on any Arduino framework
 device under platformio or the Arduino IDE. One thing to watch is if you are using a software serial you could
@@ -31,6 +34,6 @@ This was developed as part of a much larger Lithium Battery monitoring project s
 server. I intend to provide an example which will interface to Signal K via sensESP.
 
 Setup
-Get the code from github onto youe local machine, copy examples/vehex_example.cpp to src and compile.
+Setup a project folder on platformio (you can use the wizard).Get the code from github onto your local machine, copy platformioi.ini and examples/vehex_example.cpp to your project compile.
 
 Good luck
